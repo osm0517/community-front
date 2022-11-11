@@ -1,0 +1,22 @@
+.profile-text-div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.profile-text-div label{
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-right: 10%;
+}
+
+.profile-button-div{
+    margin-top: 20%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.profile-button-div button{
+    margin : 3%;
+    width: max-content;
+}

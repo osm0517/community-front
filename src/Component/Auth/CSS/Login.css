@@ -1,0 +1,25 @@
+.login-div{
+    width: fit-content;
+    height: fit-content;
+    padding: 5% 10%;
+    border: 3px solid black;
+    border-radius: 5%;
+    margin: 0 auto;
+}
+
+.login-input{
+    margin-bottom: 10%;
+    letter-spacing: 2px;
+    border-color: black;
+}
+
+.login-button{
+    margin-right: 10%;
+    background-color: white;
+    border-radius: 5%;
+    font-weight: bold;
+}
+
+.login-search-button{
+    width: max-content;
+}

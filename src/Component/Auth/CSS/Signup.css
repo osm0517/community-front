@@ -2,3 +2,51 @@
     text-align: center;
 }
 
+.signup-input-div{
+    width: 25vw;
+}
+
+.length-warning{
+    color: red;
+    font-weight: bold;
+    display: none;
+}
+
+.signup-auth-div{
+    display: none;
+}
+
+.signup-overlap-button{
+    border: 1px solid black;
+    width: max-content;
+    text-align: center;
+    margin-left: 5%;
+    
+}
+
+.signup-exist-div{
+    flex-direction: row;
+    margin-bottom: 5%;
+}
+
+.signup-exist-div p {
+    color: red;
+    font-weight: bold;
+    margin-right: 3%;
+}
+
+.signup-exist-div span {
+    border: 1px solid black;
+}
+
+.userId{
+    display: none;
+}
+
+.nickname{
+    display: none;
+}
+
+.email{
+    display: none;
+}

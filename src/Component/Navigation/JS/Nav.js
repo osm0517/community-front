@@ -1,5 +1,8 @@
 import React from "react";
 import $ from 'jquery';
+import { Link } from "react-router-dom";
+
+import '../CSS/Nav.css'
 
 function Nav() {
 
@@ -19,6 +22,17 @@ function Nav() {
                         <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
                         <button className="btn btn-outline-success" type="submit">Search</button>
                     </form>
+                    <div className="nav-icons-div">
+                        <Link to="/">
+                            <i class="bi bi-house"></i>
+                        </Link>
+                        <Link to="/user/profile">
+                            <i class="bi bi-person"></i>
+                        </Link>
+                        <Link to="/board/write">
+                            <i class="bi bi-pencil-square"></i>
+                        </Link>
+                    </div>
                 </div>
             </nav>
             <div className="bg-light nav-category-div"

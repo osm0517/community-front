@@ -1,0 +1,32 @@
+textarea{
+    height: 80%;
+    width: 80%;
+    resize: none;
+}
+
+.write-text-div{
+    height: 80%;
+}
+
+.write-text-div label{
+    margin-bottom: 5%;
+}
+
+.write-div{
+    text-align: center;
+}
+
+.write-div label{
+    font-weight: bold;
+    
+}
+
+.write-div div{
+    margin-top: 5%;
+    margin-bottom: 8%;
+}
+
+.write-div input{
+    margin-left: 5%;
+    width: 80%;
+}

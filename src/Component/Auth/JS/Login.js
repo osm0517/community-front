@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import $ from 'jquery';
 
 import '../CSS/Login.css';
+import Cookie from 'js-cookie';
 
 
 function Login() {
@@ -23,8 +24,9 @@ function Login() {
         console.log("==========");
 
         const loginData = JSON.stringify({
-            "email" : id,
-            "password" : password
+            "userId" : id,
+            "password" : password,
+            "auth" : "user"
         })
 
         //서버와 통신하기 위한 ajax
@@ -33,8 +35,22 @@ function Login() {
             type : "POST",
             data : loginData,
             dataType : "JSON",
-            contentType : "application/json; charset=utf-8"
-        }).then(v => console.log(v))
+            contentType : "application/json; charset=utf-8",
+            crossDomain : true,
+            xhrFields:{
+                withCredentials : true
+            }
+        }).then(v => {
+            if(v.status == 'OK'){
+                console.log(v);
+                alert("성공적으로 로그인 되었습니다");
+            }else{
+                alert("로그인 도중 오류가 생겼습니다" + v);
+            }
+        }).catch(err => {
+            console.log(err);
+            alert("로그인에 실패하였습니다");
+        })
     }
 
     //return 선언
@@ -48,7 +64,16 @@ function Login() {
                 <button className="login-button" type="submit"> 로그인 </button>
                 <button className="login-button" > 회원가입 </button><br /><br />
                 <button className="login-button login-search-button" > 아이디 / 비밀번호찾기 </button>
-                <div><p>OAuth2.0 사용하기 카카오<br/> & 구글</p></div>
+                <div onClick={() => {
+                    $.ajax({
+                        url : `${serverCommonURL}/user/test`,
+                        type : "GET",
+                        crossDomain : true,
+                        xhrFields:{
+                            withCredentials : true
+                        }
+                    }).then(console.log("test!"))
+                }}><p>OAuth2.0 사용하기 카카오<br/> & 구글</p></div>
             </form>
         </div>
     )

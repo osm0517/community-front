@@ -7,7 +7,7 @@ import '../CSS/Nav.css'
 function Nav() {
 
     const serveDivDisplay =() => {
-        $(".nav-category-serve-div").css("display", "block");
+        $(".nav-category-serve-div").css("display", "flex");
     }
 
     const serveDivNoDisplay =() => {
@@ -24,13 +24,13 @@ function Nav() {
                     </form>
                     <div className="nav-icons-div">
                         <Link to="/">
-                            <i class="bi bi-house"></i>
+                            <i className="bi bi-house"></i>
                         </Link>
                         <Link to="/user/profile">
-                            <i class="bi bi-person"></i>
+                            <i className="bi bi-person"></i>
                         </Link>
                         <Link to="/board/write">
-                            <i class="bi bi-pencil-square"></i>
+                            <i className="bi bi-pencil-square"></i>
                         </Link>
                     </div>
                 </div>
@@ -44,7 +44,41 @@ function Nav() {
             </div>
             <div className="bg-light nav-category-serve-div"
             onMouseOver={serveDivDisplay} onMouseOut={serveDivNoDisplay}>
-                <p>서브 div로 테스트 중입니다</p>
+                {/* 반별 */}
+                <div>
+                    <ul>
+                        <li><p>햇님반</p></li>
+                        <li><p>달님반</p></li>
+                        <li><p>해바라기반</p></li>
+                        <li><p>장미반</p></li>
+                        <li><p>나무반</p></li>
+                        <li><p>하늘반</p></li>
+                    </ul>
+                </div>
+                {/* 나이별 */}
+                <div className="margin1">
+                    <ul>
+                        <li><p>5살</p></li>
+                        <li><p>6살</p></li>
+                        <li><p>7살</p></li>
+                    </ul>
+                </div>
+                {/* 연도별 */}
+                <div className="margin2">
+                    <ul>
+                        <li><p>2021년</p></li>
+                        <li><p>2022년</p></li>
+                        <li><p>2023년</p></li>
+                    </ul>
+                </div>
+                {/* 활동별 */}
+                <div className="margin3">
+                    <ul>
+                        <li><p>수업</p></li>
+                        <li><p>현장체험학습</p></li>
+                        <li><p>특별학습</p></li>
+                    </ul>
+                </div>
             </div>
         </div>
     )

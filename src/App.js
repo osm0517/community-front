@@ -11,7 +11,6 @@ import $ from "jquery";
 // default component
 import Nav from './Component/Navigation/JS/Nav';
 import Main from './Component/Main/Main';
-import SideBar from './Component/Navigation/JS/SideBar';
 // user component
 import Login from './Component/Auth/JS/Login';
 import Signup from './Component/Auth/JS/Signup';
@@ -19,6 +18,7 @@ import UserSearch from './Component/Auth/JS/UserSearch';
 import Profile from './Component/Auth/JS/Profile';
 // board component
 import Write from './Component/Board/JS/Write';
+import List from './Component/Board/JS/List';
 
 function App() {
 
@@ -29,6 +29,7 @@ function App() {
       <div className="App">
         <Nav/>
         <Switch>
+          <Route path='/board/list' component={List}></Route>
           <Route path='/board/write' component={Write}></Route>
           <Route path='/user/login' component={Login}></Route>
           <Route path='/user/signup' component={Signup}></Route>
@@ -38,7 +39,7 @@ function App() {
             <div className='app-div'>
               <div></div>
               <Main />
-              <SideBar />
+              <div></div>
             </div>
           </Route>
         </Switch>

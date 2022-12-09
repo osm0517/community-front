@@ -1,0 +1,40 @@
+.board-list-sort{
+    margin-left: 75%;
+    margin-top: 10%;
+}
+
+.board-list-sort li{
+    margin-bottom: -10%;
+}
+
+.list-div{
+    border-bottom: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10% 0;
+}
+
+.list-div div{
+    white-space: nowrap;
+    display: flex;
+    flex-direction: row;
+    margin: 0 5%;
+}
+
+.list-div p{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-left: 5%;
+    font-weight: bold;
+}
+
+.list-div label{
+    font-weight: bold;
+    font-size: large;
+}
+
+.list-text-title{
+    width: 70%;
+}

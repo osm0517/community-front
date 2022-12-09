@@ -72,7 +72,9 @@ function Login() {
                         xhrFields:{
                             withCredentials : true
                         }
-                    }).then(console.log("test!"))
+                    }).then(v => console.log(v))
+                    .catch(err => console.error(err))
+                    // alert(Cookie.get("X-AUTH-TOKEN"));
                 }}><p>OAuth2.0 사용하기 카카오<br/> & 구글</p></div>
             </form>
         </div>

@@ -7,6 +7,7 @@ import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import {Route, BrowserRouter, Switch} from "react-router-dom"
 import { CookiesProvider } from 'react-cookie';
 import $ from "jquery";
+import { useState, useEffect } from 'react';
 
 // default component
 import Nav from './Component/Navigation/JS/Nav';
@@ -19,10 +20,28 @@ import Profile from './Component/Auth/JS/Profile';
 // board component
 import Write from './Component/Board/JS/Write';
 import List from './Component/Board/JS/List';
+import Detail from './Component/Board/JS/Detail';
 
 function App() {
+  const [name, setName] = useState(1);
+  const [nickname, setNickname] = useState("");
 
-  
+  const profileCallFunc = (x)=> {
+    $.ajax({
+      url : `http://localhost:8080/board/${x}`,
+      method : "GET",
+      contentType : "application/json; charset=utf-8",
+      crossDomain : true,
+      xhrFields:{
+          withCredentials : true
+      }
+    }).then(v => {
+      console.log(v.name);
+      console.log(v.nickname);
+      setName(v.name);
+      setNickname(v.nickname);
+    })
+  }
 
   return (
     <BrowserRouter>
@@ -34,7 +53,13 @@ function App() {
           <Route path='/user/login' component={Login}></Route>
           <Route path='/user/signup' component={Signup}></Route>
           <Route path='/user/search/:type' component={UserSearch}></Route>
-          <Route path='/user/profile' component={Profile}></Route>
+          <Route path='/user/profile'>
+            <Profile a={name}
+            callValue={profileCallFunc}/>
+          </Route>
+          <Route path='/test/detail'>
+            <Detail/>
+          </Route>
           <Route path='/'>
             <div className='app-div'>
               <div></div>

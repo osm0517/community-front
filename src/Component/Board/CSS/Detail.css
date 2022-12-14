@@ -1,0 +1,103 @@
+.detail-div{
+    padding: 5%;
+}
+
+.detail-div label{
+    font-weight: bold;
+}
+
+.detail-div .detail-text-div{
+    margin: 3%;
+    border: 1px black solid;
+    background-color: white;
+    text-align: center;
+}
+
+.detail-div .detail-text-review{
+    border: none;
+}
+
+.detail-text-review label{
+    border: 1px black solid;
+    width: 100%;
+    margin-bottom: 5%;
+    background-color: white;
+}
+
+.detail-text-review p{
+    border: 1px black solid;
+    width: 100%;
+    background-color: white;
+}
+
+.detail-div .detail-row-pos{
+    display: flex;
+    flex-direction: row;
+}
+
+.detail-row-pos p{
+    margin-left: 5%;
+}
+
+.detail-row-pos label{
+    margin-left: 1.5%;
+}
+
+.review-div{
+    margin: 0 auto;
+    width: 70%;
+    border: 1px black solid;
+}
+
+.review-title-div {
+    border-bottom: 1px black solid;
+}
+
+.review-title-div .div1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 5%;
+}
+
+.div1 div{
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+}
+
+.review-title-div .div2 {
+    margin-top: -3%;
+    margin-bottom: -2%;
+    margin-right: 5%;
+    text-align: end;
+}
+
+.review-title-div p {
+    font-size: 1vw;
+}
+
+.review-title-div label {
+    font-size: 1vw;
+    margin-right: 2%;
+}
+
+.review-text-div{
+    margin-bottom: -4%;
+}
+
+.review-text-div p{
+    margin-left: 5%;
+    font-size: 1vw;
+}
+
+.review-input-div {
+    margin-left: 5%;
+    margin-bottom: 5%;
+}
+
+.review-input-div input{
+    border-color: black;
+    text-indent: 3%;
+    width: 80%;
+}

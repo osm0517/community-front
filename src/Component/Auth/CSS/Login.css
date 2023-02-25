@@ -1,26 +1,33 @@
-.login-div{
-    width: 45%;
-    height: 100%;
-    border: 3px solid black;
-    border-radius: 5%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 5%;
+.input-div {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 5% auto;
 }
 
-.login-input{
-    margin-bottom: 10%;
-    letter-spacing: 2px;
-    border-color: black;
-}
-
-.login-button{
-    margin-right: 10%;
-    background-color: white;
-    border-radius: 5%;
+.input-div label{
     font-weight: bold;
 }
 
-.login-search-button{
-    width: max-content;
+.input-div input{
+    width: 75%;
+    border: solid black;
+    border-radius: 5px;
+}
+
+.login-container {
+    margin: 3% 30%;
+}
+
+.login-container .button-div {
+    display: flex;
+    flex-direction: column;
+}
+
+.button-div button{
+    width: 60%;
+    margin: 3% auto;
+    padding: 3%;
+    border-radius: 5px;
 }

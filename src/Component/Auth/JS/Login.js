@@ -55,28 +55,55 @@ function Login() {
 
     //return 선언
     return (
-        <div className="login-div bg-light">
-            <form action={`${serverCommonURL}/user/login`} onSubmit={loginSubmitHandle}>
-                <input className="login-input" placeholder="아이디"
-                onChange={(e) => setId(e.target.value)}/><br />
-                <input className="login-input" placeholder="비밀번호"
-                onChange={(e) => setPassword(e.target.value)}/><br />
-                <button className="login-button" type="submit"> 로그인 </button>
-                <button className="login-button" > 회원가입 </button><br /><br />
-                <button className="login-button login-search-button" > 아이디 / 비밀번호찾기 </button>
-                <div onClick={() => {
-                    $.ajax({
-                        url : `${serverCommonURL}/user/test`,
-                        type : "GET",
-                        crossDomain : true,
-                        xhrFields:{
-                            withCredentials : true
-                        }
-                    }).then(v => console.log(v))
-                    .catch(err => console.error(err))
-                    // alert(Cookie.get("X-AUTH-TOKEN"));
-                }}><p>OAuth2.0 사용하기 카카오<br/> & 구글</p></div>
-            </form>
+        // <div className="login-div bg-light">
+        //     <form action={`${serverCommonURL}/user/login`} onSubmit={loginSubmitHandle}>
+        //         <input className="login-input" placeholder="아이디"
+        //         onChange={(e) => setId(e.target.value)}/><br />
+        //         <input className="login-input" placeholder="비밀번호"
+        //         onChange={(e) => setPassword(e.target.value)}/><br />
+        //         <button className="login-button" type="submit"> 로그인 </button>
+        //         <button className="login-button" > 회원가입 </button><br /><br />
+        //         <button className="login-button login-search-button" > 아이디 / 비밀번호찾기 </button>
+        //         <div onClick={() => {
+        //             $.ajax({
+        //                 url : `${serverCommonURL}/user/test`,
+        //                 type : "GET",
+        //                 crossDomain : true,
+        //                 xhrFields:{
+        //                     withCredentials : true
+        //                 }
+        //             }).then(v => console.log(v))
+        //             .catch(err => console.error(err))
+        //             // alert(Cookie.get("X-AUTH-TOKEN"));
+        //         }}><p>OAuth2.0 사용하기 카카오<br/> & 구글</p></div>
+        //     </form>
+        // </div>
+        <div className="login-container">
+            <div className="home-title">
+                <h2>
+                    로그인
+                </h2>
+            </div>
+            <hr/>
+            <div className="input-div">
+                <label> ID </label>
+                <input type="text" placeholder="아이디를 입력해주세요."/>
+            </div>
+            <div className="input-div">
+                <label> Password </label>
+                <input type="text" placeholder="비밀번호를 입력해주세요."/>
+            </div>
+            <div className="button-div">
+                <button className="btn btn-primary">
+                    로그인
+                </button>
+                <button className="btn btn-primary">
+                    회원가입
+                </button>
+                <button className="btn btn-warning">
+                    카카오 로그인
+                </button>
+            </div>
         </div>
     )
 }

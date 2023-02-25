@@ -1,52 +1,26 @@
-.signup-button{
+.signup-container .button-div {
+    display: block;
+    text-align: right;
+}
+
+.signup-container .button-div button {
+    width: 40%;
+    margin-right: 10%;
+}
+
+.signup-container .terms-div {
     text-align: center;
 }
 
-.signup-input-div{
-    width: 25vw;
-}
-
-.length-warning{
-    color: red;
-    font-weight: bold;
-    display: none;
-}
-
-.signup-auth-div{
-    display: none;
-}
-
-.signup-overlap-button{
-    border: 1px solid black;
-    width: max-content;
-    text-align: center;
-    margin-left: 5%;
-    
-}
-
-.signup-exist-div{
-    flex-direction: row;
+.terms-div div{
     margin-bottom: 5%;
 }
 
-.signup-exist-div p {
-    color: red;
-    font-weight: bold;
-    margin-right: 3%;
+.terms-div div div{
+    text-align: right;
+    margin-right: 10%;
 }
 
-.signup-exist-div span {
-    border: 1px solid black;
-}
-
-.userId{
-    display: none;
-}
-
-.nickname{
-    display: none;
-}
-
-.email{
-    display: none;
+.terms-div div div label{
+    margin-right: 5%;
 }

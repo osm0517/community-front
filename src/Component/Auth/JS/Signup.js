@@ -3,7 +3,6 @@ import { Redirect, Route } from "react-router-dom";
 import Modal from 'react-modal';
 import $ from 'jquery';
 
-import '../CSS/Login.css';
 import '../CSS/Signup.css';
 
 
@@ -255,8 +254,78 @@ function Signup() {
     //서버와 통신하기 위한 ajax
 
     return (
-        <div className="login-div bg-light">
-            <form onSubmit={signupSubmitHandle}>
+        <div className="login-container signup-container">
+            <div className="home-title">
+                <h2>
+                    회원가입
+                </h2>
+            </div>
+            <hr/>
+            <div className="input-div">
+                <label>
+                    아이디
+                </label>
+                <input type="text" placeholder="아이디를 입력해주세요."/>
+            </div>
+            <div className="input-div">
+                <label>
+                    비밀번호
+                </label>
+                <input type="text" placeholder="비밀번호를 입력해주세요."/>
+            </div>
+            <div className="input-div">
+                <label>
+                    비밀번호 확인
+                </label>
+                <input type="text" placeholder="비밀번호를 입력해주세요."/>
+            </div>
+            <div className="input-div">
+                <label>
+                    이름
+                </label>
+                <input type="text" placeholder="이름을 입력해주세요."/>
+            </div>
+            <div className="input-div">
+                <label>
+                    Email
+                </label>
+                <input type="text" placeholder="이메일을 입력해주세요."/>
+            </div>
+            <div className="terms-div">
+                <div>
+                    <textarea disabled>
+                        약관1
+                    </textarea>
+                    <div>
+                        <label> 약관에 동의합니다. </label>
+                        <input type="checkbox" />
+                    </div>
+                </div>
+                <div>
+                    <textarea disabled>
+                        약관2
+                    </textarea>
+                    <div>
+                        <label> 약관에 동의합니다. </label>
+                        <input type="checkbox" />
+                    </div>
+                </div>
+                <div>
+                    <textarea disabled>
+                        약관3
+                    </textarea>
+                    <div>
+                        <label> 약관에 동의합니다. </label>
+                        <input type="checkbox" />
+                    </div>
+                </div>
+            </div>
+            <div className="button-div">
+                <button className="btn btn-primary">
+                    회원가입
+                </button>
+            </div>
+            {/* <form onSubmit={signupSubmitHandle}>
                 <input className='login-input' placeholder="ID"
                 onChange={(e) => stateHandler('idChange', e.target.value)}></input>
                 <span className="signup-overlap-button"
@@ -306,7 +375,7 @@ function Signup() {
                 </div>
 
                 <div className='signup-button' ><button type="submit"> 회원가입 </button></div>
-            </form>
+            </form> */}
         </div>
     )
 }

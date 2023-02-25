@@ -1,0 +1,21 @@
+.home-container {
+    margin: 3% 15%;
+}
+
+.home-container .home-title {
+    text-align: center;
+    margin: 2% 0;
+}
+
+.home-container .home-list ul {
+    list-style-type: none;
+    width: 90%;
+}
+
+.home-container .home-list li {
+    border: 1px solid black;
+    margin: 5% 0;
+    padding: 2%;
+    width: 100%;
+    cursor: pointer;
+}

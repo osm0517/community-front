@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import {Link} from "react-router-dom";
 import $ from 'jquery';
+import '../CSS/Main.css';
 
 function Main() {
     const [test, setTest] = useState("");
@@ -21,10 +22,18 @@ function Main() {
     })
     }
     return(
-        <div className="main-div">
-            <div className="a">
-                <p> "오성민"의 커뮤니티입니다.<br />
-                환영합니다.</p>
+        <div className="home-container">
+            <div className="home-title">
+                <h2>
+                    게시판 목록
+                </h2>
+            </div>
+            <div className="home-list">
+                <ul>
+                    <li>test title</li>
+                    <li>test title</li>
+                    <li>test title</li>
+                </ul>
             </div>
         </div>
     )

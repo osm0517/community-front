@@ -11,7 +11,7 @@ import { useState, useEffect } from 'react';
 
 // default component
 import Nav from './Component/Navigation/JS/Nav';
-import Main from './Component/Main/Main';
+import Main from './Component/Main/JS/Main';
 // user component
 import Login from './Component/Auth/JS/Login';
 import Signup from './Component/Auth/JS/Signup';

@@ -1,0 +1,21 @@
+.success-container .button-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.success-container button {
+    width: 40%;
+}
+
+.success-container {
+    margin: auto auto;
+    width: 40%;
+    height: 70%;
+    padding: 5%;
+    border: 2px solid black;
+}
+
+.success-container hr {
+    margin: 15% 0;
+}

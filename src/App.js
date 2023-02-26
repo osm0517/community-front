@@ -15,6 +15,7 @@ import Main from './Component/Main/JS/Main';
 // user component
 import Login from './Component/Auth/JS/Login';
 import Signup from './Component/Auth/JS/Signup';
+import SignupSuccess from './Component/Auth/JS/SignupSuccess';
 import UserSearch from './Component/Auth/JS/UserSearch';
 import Profile from './Component/Auth/JS/Profile';
 // board component
@@ -51,6 +52,7 @@ function App() {
           <Route path='/board/list' component={List}></Route>
           <Route path='/board/write' component={Write}></Route>
           <Route path='/user/login' component={Login}></Route>
+          <Route path='/user/signup/success' component={SignupSuccess}></Route>
           <Route path='/user/signup' component={Signup}></Route>
           <Route path='/user/search/:type' component={UserSearch}></Route>
           <Route path='/user/profile'>

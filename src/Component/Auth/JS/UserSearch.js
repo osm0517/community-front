@@ -2,7 +2,6 @@ import React, {useState} from "react";
 import {Link, Switch, Route} from 'react-router-dom';
 import $ from 'jquery';
 
-import '../CSS/Login.css';
 import '../CSS/UserSearch.css';
 
 function UserSearch() {
@@ -21,9 +20,17 @@ function UserSearch() {
     const searchIdRender = () => {
         return (
             <form>
-                <input className="login-input" placeholder="name"></input><br />
-                <input className="login-input" placeholder="email@example.com"></input><br />
-                <div className="signup-button"><button type="submit"> 아이디 찾기 </button></div>
+                <div className="search-input-div">
+                    <div className="input-div">
+                        <label> 이름 </label>
+                        <input className="login-input" placeholder="name"></input><br />
+                    </div>
+                    <div className="input-div">
+                        <label> 이메일 </label>
+                        <input className="login-input" placeholder="email@example.com"></input><br />
+                    </div>
+                </div>
+                <button type="submit" className="search-button btn btn-primary"> 아이디 찾기 </button>
             </form>
         )
     }
@@ -31,16 +38,24 @@ function UserSearch() {
     const searchPasswordRender = () => {
         return (
             <form>
-                <input className="login-input" placeholder="id"></input><br />
-                <input className="login-input" placeholder="email@example.com"></input><br />
-                <div className="signup-button"><button type="submit"> 비밀번호 찾기 </button></div>
+                <div className="search-input-div">
+                    <div className="input-div">
+                        <label> 이름 </label>
+                        <input className="login-input" placeholder="id"></input><br />
+                    </div>
+                    <div className="input-div">
+                        <label> 이메일 </label>
+                        <input className="login-input" placeholder="email@example.com"></input><br />
+                    </div>
+                </div>
+                <button type="submit" className="search-button btn btn-primary"> 비밀번호 찾기 </button>
             </form>
         )
     }
 
     return (
-        <div className="login-div bg-light search-div">
-            <div className="search-select-div">
+        <div className="search-container">
+            <div className="button-div">
                 <Link to="/user/search/id">
                     <button> 아이디 찾기 </button>
                 </Link>

@@ -1,5 +1,29 @@
-.search-select-div{
-    padding-bottom: 15%;
-    margin-bottom: 10%;
-    border-bottom: 3px solid black;
+.search-container .button-div {
+    margin-bottom: 5%;
+}
+
+.search-container {
+    width: 50%;
+    height: 70%;
+    margin: auto auto;
+    border: 1px solid black;
+}
+
+.search-container .button-div button {
+    width: 50%;
+    margin: 0 0;
+    border-radius: 0;
+    background-color: white;
+}
+
+.search-input-div {
+    width: 90%;
+    margin: 10% auto;
+}
+
+.search-button{
+    float: right;
+    margin-right: 10%;
+    padding: 2% 5%;
+    border-radius: 5px;
 }
